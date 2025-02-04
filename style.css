@@ -24,6 +24,7 @@ body {
     font-family: var(--fonte-principal);
     font-weight: 400;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .principal {
@@ -165,4 +166,61 @@ body {
     margin-top: 1em;
     padding: 0;
     color: var(--cinza-secundario)
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container {
+        display: flex;
+        background-image: none;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .principal {
+        margin: 0 2em;
+    }
+
+    .container__imagem {
+        width: 50vw;
+        margin: 2em 0 2em 0;
+    }
+
+    .secundario {
+        margin: 0;
+    }
+
+    .descricao__titulo {
+        margin-bottom: 0.5em;
+    }
+
+    .terciario {
+        margin: 0 2em;
+        flex-direction: column-reverse;
+    }
+
+    .terciario__imagem {
+        width: 90%;
+        margin: 0;
+        margin-bottom: 3em;
+    }
+
+    .quarternario {
+        margin: 0;
+    }
+
+    .quarternario__imagem {
+        width: 80%;
+        margin-bottom: 3em;
+    }
+
+    .dispositivos__lista {
+        flex-direction: column;
+    }
+
+    .rodape__lista {
+        flex-direction: column;
+        gap: 1.5em;
+    }
 }
